@@ -69,7 +69,7 @@ elif attg >= 0 and attg <= 59:
     attg = attg * attendance
     
         
-weightedgrade = int(labsg + examg + attg) #calculates the weighted grade by adding up lab grade, exam grade, & attendance grade
+weightedgrade = float(labsg + examg + attg) #calculates the weighted grade by adding up lab grade, exam grade, & attendance grade
 
 grade = ' ' #sets initial grade letter to an empty/blank string
 
