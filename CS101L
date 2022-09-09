@@ -8,12 +8,12 @@ name = input('Who are we calculating grades for? ==> ') #asks user for their nam
 
 labsg = int(input('Enter the labs grade? ==> ')) #asks user for their lab grade
 if labsg > 100:
-    labsg == 100 #if value is over 100, it is corrected to 100
-    labsg = labsg * labs
+    labsg == 100 * labs  #if value is over 100, it is corrected to 100
+    #labsg = labsg * labs
     print('The lab value should not be above 100. Your grade has been corrected to 100')
 elif labsg < 0:
-    labsg == 0 #if value is under 0, it is corrected to 0
-    labsg = labsg * labs
+    labsg == 0 * labs #if value is under 0, it is corrected to 0
+    #labsg = labsg * labs
     print('The lab value should not be below 0. Your grade has been corrected to 0')
 elif labsg >= 90  and labsg <= 100:
     labsg = labsg * labs
@@ -29,12 +29,12 @@ elif labsg >= 0 and labsg <= 59:
     
 examg = int(input('Enter the exams grade? ==> ')) #asks user for their exam grade
 if examg > 100:
-    examg == 100 #if value is over 100, it is corrected to 100
-    examg = examg * exams
+    examg == 100 * exams #if value is over 100, it is corrected to 100
+    #examg = examg * exams
     print('The exam value should not be above 100. Your grade has been corrected to 100')
 elif examg < 0:
-    examg == 0 #if value is under 0, it is corrected to 0
-    examg = examg * exams
+    examg == 0 * exams #if value is under 0, it is corrected to 0
+    #examg = examg * exams
     print('The exam value should not be below 0. Your grade has been corrected to 0')
 elif examg >= 90  and examg <= 100:
     examg = examg * exams
@@ -44,18 +44,18 @@ elif examg >= 70 and examg <= 79:
     examg = examg * exams
 elif examg >= 60 and examg <= 69:
     examg = examg * exams
-elif labsg >= 0 and examg <= 59:
+elif examg >= 0 and examg <= 59:
     examg = examg * exams
 
 
 attg = int(input('Enter the attendance grade? ==> ')) #asks user for their attendance grade
 if attg > 100:
-    attg == 100 #if value is over 100, it is corrected to 100
-    attg = attg * attendance
+    attg == 100 * attendance #if value is over 100, it is corrected to 100
+    #attg = attg * attendance
     print('The attendance value should not be above 100. Your grade has been corrected to 100')
-elif labsg < 0:
-    attg == 0 #if value is under 0, it is corrected to 0
-    attg = attg * attendance
+elif attg < 0:
+    attg == 0 * attendance #if value is under 0, it is corrected to 0
+    #attg = attg * attendance
     print('The attendance value should not be below 0. Your grade has been corrected to 0')
 elif attg >= 90  and attg <= 100:
     attg = attg * attendance
