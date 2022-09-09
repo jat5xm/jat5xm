@@ -1,0 +1,92 @@
+labs = 0.7 #sets the value of lab grades
+exams = 0.2 #sets the value of exam grades
+attendance = 0.1 #sets the value of attendance grades
+
+print('*** Welcome to the LAB grade calculator! ***')
+
+name = input('Who are we calculating grades for? ==> ') #asks user for their name
+
+labsg = int(input('Enter the labs grade? ==> ')) #asks user for their lab grade
+if labsg > 100:
+    labsg == 100 #if value is over 100, it is corrected to 100
+    labsg = labsg * labs
+    print('The lab value should not be above 100. Your grade has been corrected to 100')
+elif labsg < 0:
+    labsg == 0 #if value is under 0, it is corrected to 0
+    labsg = labsg * labs
+    print('The lab value should not be below 0. Your grade has been corrected to 0')
+elif labsg >= 90  and labsg <= 100:
+    labsg = labsg * labs
+elif labsg >= 80 and labsg <= 89:
+    labsg = labsg * labs
+elif labsg >= 70 and labsg <= 79:
+    labsg = labsg * labs
+elif labsg >= 60 and labsg <= 69:
+    labsg = labsg * labs
+elif labsg >= 0 and labsg <= 59:
+    labsg = labsg * labs
+
+    
+examg = int(input('Enter the exams grade? ==> ')) #asks user for their exam grade
+if examg > 100:
+    examg == 100 #if value is over 100, it is corrected to 100
+    examg = examg * exams
+    print('The exam value should not be above 100. Your grade has been corrected to 100')
+elif examg < 0:
+    examg == 0 #if value is under 0, it is corrected to 0
+    examg = examg * exams
+    print('The exam value should not be below 0. Your grade has been corrected to 0')
+elif examg >= 90  and examg <= 100:
+    examg = examg * exams
+elif examg >= 80 and examg <= 89:
+    examg = examg * exams
+elif examg >= 70 and examg <= 79:
+    examg = examg * exams
+elif examg >= 60 and examg <= 69:
+    examg = examg * exams
+elif labsg >= 0 and examg <= 59:
+    examg = examg * exams
+
+
+attg = int(input('Enter the attendance grade? ==> ')) #asks user for their attendance grade
+if attg > 100:
+    attg == 100 #if value is over 100, it is corrected to 100
+    attg = attg * attendance
+    print('The attendance value should not be above 100. Your grade has been corrected to 100')
+elif labsg < 0:
+    attg == 0 #if value is under 0, it is corrected to 0
+    attg = attg * attendance
+    print('The attendance value should not be below 0. Your grade has been corrected to 0')
+elif attg >= 90  and attg <= 100:
+    attg = attg * attendance
+elif attg >= 80 and attg <= 89:
+    attg = attg * attendance
+elif attg >= 70 and attg <= 79:
+    attg = attg * attendance
+elif attg >= 60 and attg <= 69:
+    attg = attg * attendance
+elif attg >= 0 and attg <= 59:
+    attg = attg * attendance
+    
+        
+weightedgrade = int(labsg + examg + attg) #calculates the weighted grade by adding up lab grade, exam grade, & attendance grade
+
+grade = ' ' #sets initial grade letter to an empty/blank string
+
+if weightedgrade >= 90  and weightedgrade <= 200:
+    grade = 'A'
+elif weightedgrade >= 80 and weightedgrade <= 89:
+    grade = 'B'
+elif weightedgrade >= 70 and weightedgrade <= 79:
+    grade = 'C'
+elif weightedgrade >= 60 and weightedgrade <= 69:
+    grade = 'D'
+elif weightedgrade >= -100 and weightedgrade <= 59:
+    grade = 'F'
+    
+print(f'The weighted grade for {name} is {weightedgrade}') #calculates user's weighted grade and prints it out
+
+print(f'{name} has a letter grade of {grade}') #calculates user's grade letter and prints it out
+
+
+print('*** Thanks for using the LAB grade calculator! ***')
