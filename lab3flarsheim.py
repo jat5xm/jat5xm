@@ -1,0 +1,71 @@
+game = True #sets the game to True, meaning that the game will run as long as it is True
+
+print('Welcome to the Flarsheim Guesser!') #introduces program function to user
+print()
+
+while game:
+
+    guess = int()
+    
+    print('Please think of a number between and including 1 and 100.') #prompts user to think of a number from 1-100
+    print()
+    
+    rem3 = int(input('What is the remainder of your value when divided by 3 ? ')) #asks user the remainder of their value when divided by 3
+
+    while rem3: #as long as the remainder of 3 question is valid the following statements execute
+        if rem3 < 0: #if the remainder of the user value is less than 0, the user will be prompted to type a value greater than or equal to 0
+            print()
+            print('The value must be greater than or equal to 0')
+            print()
+            rem3 = int(input('Guess again: '))
+        elif rem3 > 2: #if the remainder of the user value is greater than 2, the user will be prompted to type a value less than 3
+            print()
+            print('The value must be less than 3')
+            print()
+            rem3 = int(input('Guess again: '))
+        else: #the guess value should now be a valid value, so the modulo operator is used to find the remainder
+            guess1 = guess % rem3
+            print()
+            break
+
+
+
+    rem5 = int(input('What is the remainder of your value when divided by 5 ? ')) #asks user the remainder of their value when divided by 5
+    
+    while rem5:
+            guess2 = guess % rem5
+            print()
+            break
+
+
+
+    rem7 = int(input('What is the remainder of your value when divided by 7 ? ')) #asks user the remainder of their value when divided by 7
+    
+    while rem7:
+        guess3 = guess % rem7
+        print()
+        break
+        
+    
+    '''for''' 
+
+    while guess:
+        print(f'Your number was {guess}') #tells user what their original value was after program calculates the guess based on the input so far
+        print('How impresssive was that?') #tells user how cool and amazing the guesser program was
+    
+    playagain = str(input('Do you want to play again? Y to continue, N to quit  ==> ')) #asks user whether they would like to play again
+
+    if playagain == 'Y' or playagain == 'y': #if user types Y or y, game is played again
+        print()
+        game = True
+    elif playagain == 'N' or playagain == 'n': #if user types N or n, game is ended
+        print()
+        print('Thanks for playing!')
+        game = False
+    else:
+         playagain = str(input('Do you want to play again? Y to continue, N to quit  ==> ')) #if user types any other string besides the ones above, the question is repeated
+        
+
+    
+
+    
