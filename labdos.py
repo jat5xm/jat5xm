@@ -1,0 +1,50 @@
+print('*** Welcome to the LAB calculator! ***') #introduces the purpose of the program to the user
+print()
+
+name = input('Who are we calculating grades for? ==> ') #asks for user's name and saves the input as their name
+
+lab = int(input(f'Enter the lab grade? ==> ')) #asks user for their lab grade and saves input as an integer
+if lab > 100:
+    lab = 100
+    print('The lab value you entered should not be above 100. It has been changed to 100.') #ensures that the lab input can't be set above 100 by the user
+if lab < 0:
+    lab = 0
+    print('The lab value you entered should not be below 0. It has been changed to 0.') #ensures that the lab input can't be set below 0 by the user
+
+
+exam = int(input(f'Enter the exam grade? ==> ')) #asks user for their exam grade and saves input as an integer
+if exam > 100:
+    exam = 100
+    print('The exam value you entered should not be above 100. It has been changed to 100.') #ensures that the exam input can't be set above 100 by the user
+if exam < 0:
+    exam = 0
+    print('The exam value you entered should not be below 0. It has been changed to 0.') #ensures that the exam input can't be set below 0 by the user
+    
+
+att = int(input(f'Enter the attendance grade? ==> ')) #asks user for their attendance grade and saves input as an integer
+if att > 100:
+    att = 100
+    print('The attendance value you entered should not be above 100. It has been changed to 100.') #ensures that the attendance input can't be set above 100 by the user
+if att < 0:
+    att = 0
+    print('The attendance value you entered should not be below 0. It has been changed to 0.') #ensures that the attendance input can't be set below 0 by the user
+    
+
+weightedgrade = float((lab * 0.70) + (exam * 0.20) + (att * 0.10)) #basic formula for computing the weighted grade according to the instructions
+
+
+if weightedgrade <= 100 and weightedgrade >= 90: #if weighted grade is 90-100, then the letter grade is A
+    grade = 'A'
+elif weightedgrade <= 89 and weightedgrade >= 80: #if weighted grade is 80-89, then the letter grade is B
+    grade = 'B'
+elif weightedgrade <= 79 and weightedgrade >= 70: #if weighted grade is 70-79, then the letter grade is C
+    grade = 'C'
+elif weightedgrade <= 69 and weightedgrade >= 60: #if weighted grade is 60-69, then the letter grade is D
+    grade = 'D'
+elif weightedgrade <= 59 and weightedgrade >= 0: #if weighted grade is 0-59, then the letter grade is F
+    grade = 'F'
+
+print(f'The weighted grade for {name} is {weightedgrade}') #shows the user their name and weighted grade
+print(f'{name} has a letter grade of {grade}') #shows the user their name and letter grade
+print()
+print('*** Thanks for using the LAB grade calculator! ***') #thanks the user for their time in using the program
