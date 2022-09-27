@@ -1,9 +1,9 @@
 ########################################################################
 ##
 ## CS 101 Lab
-## Program #
-## Name
-## Email
+## Program lab05
+## Jair Tobias-Zamora
+## jat5xm@umsystem.edu
 ##
 ## PROBLEM : Certain aspects of code are stubbed out and game infinitely plays without user being able to input anything
 ##
